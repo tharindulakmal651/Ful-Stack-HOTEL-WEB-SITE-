@@ -1,12 +1,10 @@
-// Exchange rate: 1 USD = 320 LKR (update as needed)
-export const USD_TO_LKR = 320;
-
-export const toRs = (usd) => {
-  const lkr = parseFloat(usd || 0) * USD_TO_LKR;
-  return `Rs. ${lkr.toLocaleString('en-LK', { maximumFractionDigits: 0 })}`;
+// Prices are already stored as LKR in the database
+export const toRs = (lkrPrice) => {
+  const price = parseFloat(lkrPrice || 0);
+  return `LKR ${price.toLocaleString('en-LK', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 };
 
-export const toRsNum = (usd) => parseFloat(usd || 0) * USD_TO_LKR;
+export const toRsNum = (lkrPrice) => parseFloat(lkrPrice || 0);
 
 // Image URL helper — serves from backend port 5000
 const BACKEND = 'http://localhost:5000';
