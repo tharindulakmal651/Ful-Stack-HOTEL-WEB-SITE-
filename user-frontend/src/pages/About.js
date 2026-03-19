@@ -15,8 +15,8 @@ const About = () => {
         <div className="page-header-bg" />
         <div className="container page-header-content">
           <p className="section-eyebrow">Our Story</p>
-          <h1>About Araliya Resort</h1>
-          <p>A legacy of luxury hospitality on the shores of Unawatuna since 2003</p>
+          <h1>About HMTL Resort</h1>
+          <p>A legacy of luxury hospitality on the shores of Trincomalee since 2025</p>
         </div>
       </div>
 
@@ -27,8 +27,8 @@ const About = () => {
             <div className="story-text">
               <p className="section-eyebrow">Who We Are</p>
               <h2 className="section-title">A Paradise by the Sea</h2>
-              <p>Nestled along the pristine shores of Unawatuna in Sri Lanka's southern coast, Araliya Beach Resort & Spa stands as one of the region's finest luxury beach resorts. Our name, "Araliya," means <em>frangipani flower</em> in Sinhala — a symbol of beauty, warmth, and hospitality.</p>
-              <p>Since opening our doors in 2003, we have welcomed guests from around the world seeking a perfect blend of authentic Sri Lankan culture and international luxury. With our direct beach access, two spectacular infinity pools, award-winning spa, and world-class dining, every stay becomes a cherished memory.</p>
+              <p>Nestled along the pristine shores of Trincomalee in Sri Lanka's southern coast, HMTL Beach Resort & Spa stands as one of the region's finest luxury beach resorts. Our name, "HMTL," means <em>frangipani flower</em> in Sinhala — a symbol of beauty, warmth, and hospitality.</p>
+              <p>Since opening our doors in 2025, we have welcomed guests from around the world seeking a perfect blend of authentic Sri Lankan culture and international luxury. With our direct beach access, two spectacular infinity pools, award-winning spa, and world-class dining, every stay becomes a cherished memory.</p>
               <p>We hold a proud Booking.com score of <strong>8.0 (Very Good)</strong> with multiple couples rating us 10/10 for the intimate, personalized service our dedicated team provides.</p>
               <div className="about-highlights">
                 <div className="ah-item"><strong>20+</strong><span>Years of Excellence</span></div>
@@ -111,7 +111,7 @@ const About = () => {
           <div className="text-center">
             <p className="section-eyebrow">Location</p>
             <h2 className="section-title">Find Us</h2>
-            <p className="section-subtitle">Welledewala Road, Yaddehimulla, Unawatuna 80000, Sri Lanka</p>
+            <p className="section-subtitle">Nilaweli Road, Alas Graden, Trincomalee 80000, Sri Lanka</p>
           </div>
           <div className="map-wrapper">
             <iframe
@@ -122,10 +122,10 @@ const About = () => {
               referrerPolicy="no-referrer-when-downgrade"
             />
             <div className="map-info-card">
-              <h4>🏖️ Araliya Beach Resort & Spa</h4>
-              <p>📍 Welledewala Road, Yaddehimulla<br />Unawatuna, Galle 80000<br />Sri Lanka</p>
+              <h4>🏖️  Beach HMTLResort & Spa</h4>
+              <p>📍 Nilaweli Road, Alas Graden<br />Trincomalee 80000<br />Sri Lanka</p>
               <p>📞 +94 91 222 3456</p>
-              <p>✉️ info@araliyaresort.lk</p>
+              <p>✉️ info@hmtlresort.lk</p>
               <a href="https://maps.google.com/?q=Unawatuna,Sri+Lanka" target="_blank" rel="noreferrer" className="btn btn-ocean btn-sm" style={{ marginTop: '12px' }}>
                 Open in Maps
               </a>
