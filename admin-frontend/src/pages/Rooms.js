@@ -83,7 +83,7 @@ const RoomModal = ({ room, onClose, onSave }) => {
         )}
         {!room && (
           <p style={{fontSize:'0.8rem',color:'var(--text-light)',marginTop:12,textAlign:'center'}}>
-            💡 vijaysiu Save the room first, then upload photos by editing it.
+            💡 Save the room first, then upload photos by editing it.
           </p>
         )}
       </div>
