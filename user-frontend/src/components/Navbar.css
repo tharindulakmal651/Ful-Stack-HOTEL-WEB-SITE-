@@ -1,0 +1,70 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+.navbar.scrolled {
+  background: rgba(26,74,94,0.97);
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 12px;
+  color: white; text-decoration: none;
+}
+.brand-icon { font-size: 1.8rem; }
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 700; line-height: 1;
+}
+.brand-sub { font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.8; }
+
+.nav-links {
+  display: flex; align-items: center; gap: 8px;
+}
+.nav-link {
+  color: rgba(255,255,255,0.85); font-weight: 500;
+  padding: 8px 14px; border-radius: 8px;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+.nav-link:hover, .nav-link.active {
+  color: white; background: rgba(255,255,255,0.12);
+}
+.nav-auth { margin-left: 16px; }
+.nav-auth-btns { display: flex; align-items: center; gap: 8px; }
+.nav-user { display: flex; align-items: center; gap: 10px; }
+.nav-user-name {
+  color: rgba(255,255,255,0.9); font-weight: 500; font-size: 0.9rem;
+  padding: 6px 12px; background: rgba(255,255,255,0.1); border-radius: 8px;
+}
+.nav-hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.nav-hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: white; border-radius: 2px; transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav-hamburger { display: flex; }
+  .nav-links {
+    display: none; position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--ocean);
+    flex-direction: column; justify-content: center;
+    gap: 12px; padding: 24px;
+    z-index: 999;
+  }
+  .nav-links.open { display: flex; }
+  .nav-link { font-size: 1.2rem; padding: 12px 20px; text-align: center; }
+  .nav-auth { margin: 20px 0 0; }
+  .nav-auth-btns, .nav-user { flex-direction: column; gap: 12px; align-items: center; }
+}

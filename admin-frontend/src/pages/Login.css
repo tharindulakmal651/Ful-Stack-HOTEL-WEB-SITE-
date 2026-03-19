@@ -1,0 +1,30 @@
+.login-page {
+  min-height: 100vh; display: flex; align-items: center;
+  justify-content: center; padding: 20px; position: relative;
+}
+.login-bg {
+  position: fixed; inset: 0; z-index: -1;
+  background: linear-gradient(160deg, #0d3347 0%, #1a6a87 60%, #2a9ab8 100%);
+}
+.login-card {
+  background: white; border-radius: 20px; padding: 40px;
+  width: 100%; max-width: 420px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  animation: slideUp 0.35s ease;
+}
+.login-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+.login-brand span { font-size: 2rem; }
+.lb-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--ocean); line-height: 1; }
+.lb-sub  { font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); }
+.login-card h2 { font-size: 1.7rem; margin-bottom: 6px; }
+.login-sub { color: var(--text-light); font-size: 0.88rem; margin-bottom: 24px; }
+.login-btn { width: 100%; justify-content: center; padding: 13px; font-size: 0.95rem; margin-top: 8px; }
+.login-demo { margin-top: 20px; background: var(--sand); border-radius: 8px; padding: 10px 14px; text-align: center; }
+.login-demo p { font-size: 0.78rem; color: var(--text-light); }
+
+/* Register link divider */
+.auth-divider { display:flex; align-items:center; gap:12px; margin:18px 0; color:var(--text-light,#8a8a9a); font-size:0.8rem; }
+.auth-divider::before, .auth-divider::after { content:''; flex:1; height:1px; background:var(--sand-dark,#e8d9c4); }
+
+/* Outline button in login form */
+.btn-outline { background:transparent; border:2px solid var(--ocean,#1a4a5e); color:var(--ocean,#1a4a5e); }
+.btn-outline:hover { background:var(--ocean,#1a4a5e); color:white; }
