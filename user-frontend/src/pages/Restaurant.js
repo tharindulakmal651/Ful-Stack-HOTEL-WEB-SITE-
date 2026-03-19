@@ -108,7 +108,7 @@ const Restaurant = () => {
                 <h3>{b.name}</h3>
                 <p>{b.desc}</p>
               </div>
-              <div className="buffet-price">From Rs {b.price}<small>/person</small></div>
+              <div className="buffet-price">From LKR {b.price}<small>/person</small></div>
             </div>
           ))}
         </div>
@@ -150,7 +150,7 @@ const Restaurant = () => {
                       <h4>{item.name}</h4>
                       <p>{item.description}</p>
                       <div className="menu-item-footer">
-                        <span className="menu-price">Rs {item.price}</span>
+                        <span className="menu-price">LKR {item.price}</span>
                         {inCart ? (
                           <div className="qty-control">
                             <button onClick={() => updateQty(item.id, inCart.qty - 1)}>−</button>
@@ -188,7 +188,7 @@ const Restaurant = () => {
                     <div className="cart-item" key={item.id}>
                       <div className="cart-item-info">
                         <strong>{item.name}</strong>
-                        <span>Rs {(item.price * item.qty).toFixed(2)}</span>
+                        <span>LKR {(item.price * item.qty).toFixed(2)}</span>
                       </div>
                       <div className="qty-control">
                         <button onClick={() => updateQty(item.id, item.qty - 1)}>−</button>
@@ -199,7 +199,7 @@ const Restaurant = () => {
                   ))}
                 </div>
                 <div className="cart-total">
-                  <span>Total</span><strong>Rs {totalCart.toFixed(2)}</strong>
+                  <span>Total</span><strong>LKR {totalCart.toFixed(2)}</strong>
                 </div>
                 {orderError && <div className="alert alert-error">{orderError}</div>}
                 <form onSubmit={placeOrder} style={{ padding: '0 20px 20px' }}>
@@ -227,7 +227,7 @@ const Restaurant = () => {
                       value={orderForm.special_instructions} onChange={e => setOrderForm({ ...orderForm, special_instructions: e.target.value })} />
                   </div>
                   <button type="submit" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }} disabled={orderLoading}>
-                    {orderLoading ? 'Placing Order...' : `Place Order — Rs {totalCart.toFixed(2)}`}
+                    {orderLoading ? 'Placing Order...' : `Place Order — LKR {totalCart.toFixed(2)}`}
                   </button>
                 </form>
               </>

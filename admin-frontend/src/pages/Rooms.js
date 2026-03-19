@@ -50,7 +50,7 @@ const RoomModal = ({ room, onClose, onSave }) => {
           <div className="form-row">
             <div className="form-group"><label className="form-label">View Type</label>
               <input className="form-control" placeholder="Sea View" value={form.view_type} onChange={e=>f('view_type',e.target.value)}/></div>
-            <div className="form-group"><label className="form-label">Price / Night (Rs) *</label>
+            <div className="form-group"><label className="form-label">Price / Night (LKR) *</label>
               <input className="form-control" type="number" min="1" step="0.01" value={form.price_per_night} onChange={e=>f('price_per_night',e.target.value)} required/></div>
           </div>
           <div className="form-row">
@@ -168,7 +168,7 @@ const Rooms = ({ showToast }) => {
                       <td><strong>{r.room_number}</strong></td>
                       <td>{r.room_type}</td>
                       <td>{r.view_type||'—'}</td>
-                      <td><strong>Rs {parseFloat(r.price_per_night).toFixed(2)}</strong></td>
+                      <td><strong>LKR {parseFloat(r.price_per_night).toFixed(2)}</strong></td>
                       <td>{r.max_guests}</td>
                       <td><span className={`badge ${r.is_available?'badge-green':'badge-red'}`}>{r.is_available?'Available':'Unavailable'}</span></td>
                       <td>

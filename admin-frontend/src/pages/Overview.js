@@ -86,7 +86,7 @@ const Overview = () => {
                     <td>{b.room_type} #{b.room_number}</td>
                     <td>{fmtDate(b.check_in)}</td>
                     <td>{fmtDate(b.check_out)}</td>
-                    <td>Rs {fmtMoney(b.total_price)}</td>
+                    <td>LKR {fmtMoney(b.total_price)}</td>
                     <td><span className={`badge ${STATUS_BADGE[b.status] || 'badge-gray'}`}>{b.status}</span></td>
                   </tr>
                 ))}

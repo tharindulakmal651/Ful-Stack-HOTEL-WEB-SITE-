@@ -46,7 +46,7 @@ const PkgModal = ({ pkg, onClose, onSave }) => {
             <div className="form-group"><label className="form-label">Type *</label>
               <select className="form-control" value={form.type} onChange={e=>f('type',e.target.value)}>
                 {TYPES.map(t=><option key={t}>{t}</option>)}</select></div>
-            <div className="form-group"><label className="form-label">Price (Rs) *</label>
+            <div className="form-group"><label className="form-label">Price (LKR) *</label>
               <input className="form-control" type="number" min="0" step="0.01" value={form.price} onChange={e=>f('price',e.target.value)} required/></div>
           </div>
           <div className="form-group"><label className="form-label">Duration</label>
@@ -153,7 +153,7 @@ const Packages = ({ showToast }) => {
                       </td>
                       <td><strong>{p.name}</strong><div style={{fontSize:'0.75rem',color:'var(--text-light)'}}>{includes.slice(0,2).join(', ')}</div></td>
                       <td><span className="badge badge-ocean">{p.type}</span></td>
-                      <td><strong>Rs {parseFloat(p.price).toFixed(2)}</strong></td>
+                      <td><strong>LKR {parseFloat(p.price).toFixed(2)}</strong></td>
                       <td>{p.duration||'—'}</td>
                       <td><span className={`badge ${p.is_active?'badge-green':'badge-gray'}`}>{p.is_active?'Active':'Inactive'}</span></td>
                       <td>
