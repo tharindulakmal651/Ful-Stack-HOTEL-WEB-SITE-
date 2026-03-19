@@ -94,7 +94,7 @@ const Bookings = ({ showToast }) => {
                       <td>{nights}</td>
                       <td>{b.guests}</td>
                       <td>{b.extras === 'none' ? '—' : b.extras}</td>
-                      <td><strong>${fmtMoney(b.total_price)}</strong></td>
+                      <td><strong>Rs {fmtMoney(b.total_price)}</strong></td>
                       <td><span className={`badge ${STATUS_BADGE[b.status] || 'badge-gray'}`}>{b.status}</span></td>
                       <td>
                         <select className="status-select" value={b.status}

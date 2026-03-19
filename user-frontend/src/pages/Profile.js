@@ -190,7 +190,7 @@ const Profile = () => {
                         <div className="bi-detail"><span>📅 Check-Out</span><strong>{fmtDate(b.check_out)}</strong></div>
                         <div className="bi-detail"><span>👥 Guests</span><strong>{b.guests}</strong></div>
                         <div className="bi-detail"><span>🍽️ Meals</span><strong>{b.extras==='none'?'None':b.extras}</strong></div>
-                        <div className="bi-detail bi-total"><span>💰 Total</span><strong>${fmt(b.total_price)}</strong></div>
+                        <div className="bi-detail bi-total"><span>💰 Total</span><strong>Rs {fmt(b.total_price)}</strong></div>
                       </div>
                       {b.special_requests && <p className="bi-note">📝 {b.special_requests}</p>}
                       {(b.status==='pending' || b.status==='confirmed') && (
@@ -231,7 +231,7 @@ const Profile = () => {
                       </div>
                       <div className="order-items-list">
                         {(o.items||[]).map((item,i) => (
-                          <span key={i}>{item.name} ×{item.qty} — ${(item.price*item.qty).toFixed(2)}</span>
+                          <span key={i}>{item.name} ×{item.qty} — Rs {(item.price*item.qty).toFixed(2)}</span>
                         ))}
                       </div>
                       {o.special_instructions && <p className="bi-note">📝 {o.special_instructions}</p>}

@@ -39,7 +39,7 @@ const MenuModal = ({ item, onClose, onSave }) => {
             <div className="form-group"><label className="form-label">Category *</label>
               <select className="form-control" value={form.category} onChange={e=>f('category',e.target.value)}>
                 {CATEGORIES.map(c=><option key={c} value={c}>{CAT_ICON[c]} {c}</option>)}</select></div>
-            <div className="form-group"><label className="form-label">Price ($) *</label>
+            <div className="form-group"><label className="form-label">Price (Rs) *</label>
               <input className="form-control" type="number" min="0" step="0.01" value={form.price} onChange={e=>f('price',e.target.value)} required/></div>
           </div>
           <div className="form-group"><label className="form-label">Description</label>
@@ -132,7 +132,7 @@ const Menu = ({ showToast }) => {
                       <div style={{fontSize:'0.75rem',color:'var(--text-light)',marginTop:2}}>{m.description?.substring(0,50)}{m.description?.length>50?'...':''}</div>
                     </td>
                     <td><span className="badge badge-ocean">{CAT_ICON[m.category]} {m.category}</span></td>
-                    <td><strong>${parseFloat(m.price).toFixed(2)}</strong></td>
+                    <td><strong>Rs {parseFloat(m.price).toFixed(2)}</strong></td>
                     <td>{m.is_vegetarian?'🌿 Yes':'—'}</td>
                     <td><span className={`badge ${m.is_available?'badge-green':'badge-red'}`}>{m.is_available?'Yes':'No'}</span></td>
                     <td>
